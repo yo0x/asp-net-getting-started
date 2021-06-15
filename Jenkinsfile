@@ -1,10 +1,10 @@
 pipeline {
-    agent any
+    agent {dockerfile true}
     stages {
         stage ('git repo'){
             steps {
-                bat "rmdir /s /q asp-net-getting-started"
-                bat "git clone https://"
+                bat "set JEN_B=${env.BUILD_ID}"
+                bat "echo %JEN_B%"
             }
         }
 
