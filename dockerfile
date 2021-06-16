@@ -12,4 +12,3 @@ WORKDIR /app
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "asp-net-getting-started.dll"]
 EXPOSE 5000:80
-CMD [ "cmd.exe", "set" ]
