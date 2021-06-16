@@ -10,5 +10,4 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
 WORKDIR /app
 COPY --from=build-env /app/out .
-ENTRYPOINT ["dotnet", "asp-net-getting-started.dll"]
-EXPOSE 5000:80
+# ENTRYPOINT ["dotnet", "asp-net-getting-started.dll"]
