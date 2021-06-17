@@ -1,3 +1,4 @@
+/* groovylint-disable-next-line NglParseError */
 pipeline {
     agent { dockerfile true }
     stages {
@@ -6,6 +7,8 @@ pipeline {
             steps {
                 bat "set JEN_B=${env.BUILD_ID}"
                 bat 'echo %JEN_B%'
+                bat "cd c:/app/"
+                bat "dotnet asp-net-getting-started.dll"]
             }
         }
     }
